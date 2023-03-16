@@ -1,0 +1,144 @@
+nav{
+    height: 80px;
+    /* border: 1px solid black; */
+    background-color: #EC8EA8;
+}
+
+li{
+    display: inline-block;
+    margin: 10px;
+}
+ul{
+    margin-left: 30%;
+    margin-top: -40px;
+
+}
+.hero{
+    height: 570px;
+    /* border: 1px solid black; */
+    background-image: url(./hero.jpg);
+    background-size: 100% 100%;
+}
+.welcome{
+    height: 500px;
+    /* border: 1px solid black; */
+}
+.one,.two,.three{
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid black; */
+    display: inline-block;
+    margin: 10px;
+}
+.one{
+    background-image: url(./1.jpg);
+    background-size: 100% 100%;
+}
+.two{
+    background-image: url(./2.jpg);
+    background-size: 100% 100%;
+}
+.three{
+    background-image: url(./3.png);
+    background-size: 100% 100%;
+}
+.arrival{
+    height: 600px;
+    border: 1px dotted;
+}
+.four,.five,.six{
+    height: 400px;
+    width: 300px;
+    border: 1px groove ;
+    display: inline-block;
+    margin: 10px;
+}
+.four{
+    background-image: url(./4.jpg);
+    background-size: 100% 100%;
+}
+.five{
+    background-image: url(./5.jpg);
+    background-size: 100% 100%;
+}
+.six{
+    background-image: url(./6.jpg);
+    background-size: 100% 100%;
+}
+.four:hover{
+    background-image: url(./4.5.jpg);
+}
+.five:hover{
+    background-image: url(./5.5.jpg);
+}
+.six:hover{
+    background-image: url(./6.5.jpg);
+}
+
+.img1,.img2{
+    height: 660px;
+    width: 50%;
+    /* border: 1px solid black; */
+}
+.img1{
+    background-image: url(./8.png);
+    background-size: 100% 100%;
+}
+.img2{
+    margin-left: 50%;
+    margin-top: -661px;
+    background-image: url(./7.png);
+    background-size: 100% 100%;
+
+}
+
+#price{
+    height: 70px;
+    width: 70px;
+    background-image: url(./8.5.png);
+    border-radius: 50%;
+    background-size: 100% 100%;
+    /* border: 1px solid black; */
+    margin-top: -300px;
+    margin-left: 180px;
+    transition: all 2s;
+}
+#price:hover{
+height: 200px;
+width: 200px;
+border-radius: 0%;
+}
+
+
+#price1{
+    height: 70px;
+    width: 70px;
+    background-image: url(./7.5.png);
+    border-radius: 50%;
+    background-size: 100% 100%;
+    /* border: 1px solid black; */
+    margin-top: -300px;
+    margin-right: 180px;
+    transition: all 2s;
+    float: right;
+}
+#price1:hover{
+    height: 200px;
+    width: 200px;
+    border-radius: 0%;
+    }
+
+footer{
+    height: 500px;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: 230px;
+
+}
+.f1,.f2,.f3,.f4{
+    height:400px;
+    width: 300px;
+     /*border: 1px solid black*/; 
+    display: inline-block;
+   
+}
