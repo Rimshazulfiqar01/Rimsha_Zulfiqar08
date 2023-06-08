@@ -1,0 +1,14 @@
+
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const comment = await comment.findByIdAndDelete(id);
+    if (!comment) {
+      return res.status(404).json({ error: 'comment not found' });
+    }
+    res.sendStatus(204);
+  } catch (err) {
+    console.error('Failed to delete comment:', err);
+    res.status(500).json({ error: 'Failed to delete comment' });
+  }
+});

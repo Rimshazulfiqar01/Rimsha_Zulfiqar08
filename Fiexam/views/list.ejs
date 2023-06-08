@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>comment List</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .btn {
+      margin-top: 10px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".btn").click(function() {
+        var tableBody = $("tbody");
+
+        $.ajax({
+          type: "GET",
+          url: "/comment", // Replace with your API endpoint
+          success: function(data) {
+            tableBody.empty(); // Clear existing table rows
+
+            for (var i = 0; i < data.length; i++) {
+              var row = "<tr>" +
+                "<td>" + data[i].author + "</td>" +
+                "<td>" + data[i].content + "</td>" +
+                "<td>" + data[i].liked + "</td>" +
+                "</tr>";
+
+              tableBody.append(row); // Append new row to the table
+            }
+          },
+          error: function(xhr, status, error) {
+            console.log(error);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>comment List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>author</th>
+        <th>content</th>
+        <th>liked</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <button class="btn">Load Data</button>
+</body>
+</html>

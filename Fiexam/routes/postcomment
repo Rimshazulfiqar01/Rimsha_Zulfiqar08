@@ -1,0 +1,12 @@
+
+router.post('/', async (req, res) => {
+  const { name, email, password } = req.body;
+  const newcomment= new comment({ name, email, password });
+  try {
+    const comment = await newcomment.save();
+    res.status(201).json(comment);
+  } catch (err) {
+    console.error('Failed to create comment:', err);
+    res.status(500).json({ error: 'Failed to create comment' });
+  }
+});
