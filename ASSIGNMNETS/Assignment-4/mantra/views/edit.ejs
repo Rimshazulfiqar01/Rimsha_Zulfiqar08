@@ -1,0 +1,52 @@
+<style>
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-container label {
+      margin-bottom: 0.5rem;
+    }
+  
+    .form-container input {
+      margin-bottom: 1rem;
+    }
+  
+    .form-container button {
+      margin-top: 1rem;
+    }
+  </style>
+  
+
+
+
+
+<div class="form-container">
+    <h2>Edit Dress Record</h2>
+  
+    <form action="/update/<%= dress._id %>" method="POST">
+      <div>
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" value="<%= dress.Size %>">
+      </div>
+      <div>
+        <label for="colour">Colour:</label>
+        <input type="text" id="colour" name="colour" value="<%= dress.Colour %>">
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" value="<%= dress.Price %>">
+      </div>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  
